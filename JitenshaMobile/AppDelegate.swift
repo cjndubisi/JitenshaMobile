@@ -12,12 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var apiToken: String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        application.isStatusBarHidden = true
+
         return true
     }
-
+    
+    static var delegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 }
 
