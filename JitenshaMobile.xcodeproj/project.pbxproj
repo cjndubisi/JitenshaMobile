@@ -19,6 +19,14 @@
 		4FA72C131E6707A200104FAA /* POST#rent.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0F1E6707A200104FAA /* POST#rent.json */; };
 		4FA72C181E673A7F00104FAA /* JitenshaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C171E673A7F00104FAA /* JitenshaAPI.swift */; };
 		4FA72C1A1E673FAA00104FAA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C191E673FAA00104FAA /* APIClient.swift */; };
+		4FA72C1E1E67476800104FAA /* UIAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C1D1E67476800104FAA /* UIAssistant.swift */; };
+		4FA72C201E67485000104FAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C1F1E67485000104FAA /* MapViewController.swift */; };
+		4FE8CFEF1E674BE3008749A7 /* PlaceAnnotationCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8CFEE1E674BE3008749A7 /* PlaceAnnotationCallout.swift */; };
+		4FE8CFF11E674C05008749A7 /* PlaceAnnotationCallout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE8CFF01E674C05008749A7 /* PlaceAnnotationCallout.xib */; };
+		4FE8CFF31E674F49008749A7 /* PlaceMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8CFF21E674F49008749A7 /* PlaceMapAnnotation.swift */; };
+		4FE8CFF51E674FC1008749A7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8CFF41E674FC1008749A7 /* Place.swift */; };
+		4FE8CFF91E675437008749A7 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8CFF81E675437008749A7 /* PlaceAnnotationView.swift */; };
+		4FE8CFFB1E675670008749A7 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE8CFFA1E675670008749A7 /* MapViewController.xib */; };
 		572566ADDC4018C99C92B7A2 /* Pods_JitenshaMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */; };
 		A2681A36063D9C2CC5D48AAE /* Pods_JitenshaMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD2CCE4C90B6E42B28FDA84 /* Pods_JitenshaMobile.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +60,14 @@
 		4FA72C0F1E6707A200104FAA /* POST#rent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POST#rent.json"; sourceTree = "<group>"; };
 		4FA72C171E673A7F00104FAA /* JitenshaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JitenshaAPI.swift; path = APIClinet/JitenshaAPI.swift; sourceTree = "<group>"; };
 		4FA72C191E673FAA00104FAA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = APIClinet/APIClient.swift; sourceTree = "<group>"; };
+		4FA72C1D1E67476800104FAA /* UIAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAssistant.swift; sourceTree = "<group>"; };
+		4FA72C1F1E67485000104FAA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4FE8CFEE1E674BE3008749A7 /* PlaceAnnotationCallout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceAnnotationCallout.swift; path = Map/View/PlaceAnnotationCallout.swift; sourceTree = "<group>"; };
+		4FE8CFF01E674C05008749A7 /* PlaceAnnotationCallout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceAnnotationCallout.xib; path = Map/View/PlaceAnnotationCallout.xib; sourceTree = "<group>"; };
+		4FE8CFF21E674F49008749A7 /* PlaceMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceMapAnnotation.swift; path = Map/Model/PlaceMapAnnotation.swift; sourceTree = "<group>"; };
+		4FE8CFF41E674FC1008749A7 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Common/Place.swift; sourceTree = "<group>"; };
+		4FE8CFF81E675437008749A7 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceAnnotationView.swift; path = Map/View/PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		4FE8CFFA1E675670008749A7 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Map/View/MapViewController.xib; sourceTree = "<group>"; };
 		66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitenshaMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0F8131C6BE540190FEFC0B /* Pods-JitenshaMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile.release.xcconfig"; sourceTree = "<group>"; };
 		A7A2A953AD20097880BA54B8 /* Pods-JitenshaMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,11 +138,13 @@
 			isa = PBXGroup;
 			children = (
 				4FA72BEC1E66F3F000104FAA /* AppDelegate.swift */,
-				4FA72BEE1E66F3F000104FAA /* AuthController.swift */,
-				4FA72BF01E66F3F000104FAA /* Main.storyboard */,
+				4FE8CFF71E6752E8008749A7 /* Login & Register */,
+				4FE8CFF61E6752DA008749A7 /* Map */,
 				4FA72BF31E66F3F000104FAA /* Assets.xcassets */,
 				4FA72BF51E66F3F000104FAA /* LaunchScreen.storyboard */,
 				4FA72BF81E66F3F000104FAA /* Info.plist */,
+				4FE8CFF41E674FC1008749A7 /* Place.swift */,
+				4FA72C1C1E67476800104FAA /* Utils */,
 				4FA72C1B1E67466300104FAA /* API */,
 			);
 			path = JitenshaMobile;
@@ -160,6 +178,36 @@
 				4FA72C191E673FAA00104FAA /* APIClient.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		4FA72C1C1E67476800104FAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FA72C1D1E67476800104FAA /* UIAssistant.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4FE8CFF61E6752DA008749A7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4FA72C1F1E67485000104FAA /* MapViewController.swift */,
+				4FE8CFFA1E675670008749A7 /* MapViewController.xib */,
+				4FE8CFEE1E674BE3008749A7 /* PlaceAnnotationCallout.swift */,
+				4FE8CFF81E675437008749A7 /* PlaceAnnotationView.swift */,
+				4FE8CFF01E674C05008749A7 /* PlaceAnnotationCallout.xib */,
+				4FE8CFF21E674F49008749A7 /* PlaceMapAnnotation.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		4FE8CFF71E6752E8008749A7 /* Login & Register */ = {
+			isa = PBXGroup;
+			children = (
+				4FA72BEE1E66F3F000104FAA /* AuthController.swift */,
+				4FA72BF01E66F3F000104FAA /* Main.storyboard */,
+			);
+			name = "Login & Register";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +303,8 @@
 				4FA72BF71E66F3F000104FAA /* LaunchScreen.storyboard in Resources */,
 				4FA72BF41E66F3F000104FAA /* Assets.xcassets in Resources */,
 				4FA72BF21E66F3F000104FAA /* Main.storyboard in Resources */,
+				4FE8CFFB1E675670008749A7 /* MapViewController.xib in Resources */,
+				4FE8CFF11E674C05008749A7 /* PlaceAnnotationCallout.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +420,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA72C1A1E673FAA00104FAA /* APIClient.swift in Sources */,
+				4FE8CFF51E674FC1008749A7 /* Place.swift in Sources */,
+				4FA72C201E67485000104FAA /* MapViewController.swift in Sources */,
+				4FE8CFF91E675437008749A7 /* PlaceAnnotationView.swift in Sources */,
+				4FA72C1E1E67476800104FAA /* UIAssistant.swift in Sources */,
 				4FA72BEF1E66F3F000104FAA /* AuthController.swift in Sources */,
+				4FE8CFEF1E674BE3008749A7 /* PlaceAnnotationCallout.swift in Sources */,
+				4FE8CFF31E674F49008749A7 /* PlaceMapAnnotation.swift in Sources */,
 				4FA72BED1E66F3F000104FAA /* AppDelegate.swift in Sources */,
 				4FA72C181E673A7F00104FAA /* JitenshaAPI.swift in Sources */,
 			);

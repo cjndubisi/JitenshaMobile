@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleKeychain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         application.isStatusBarHidden = true
+
+        guard let token = A0SimpleKeychain(service: "Jitensha").string(forKey: "accessToken") else {
+            return true
+        }
+
+        APIClinet.shared.apiToken = token
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIAssistant.rootView()
+
+        window?.makeKeyAndVisible()
 
         return true
     }

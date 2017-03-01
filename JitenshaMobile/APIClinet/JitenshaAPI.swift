@@ -11,14 +11,14 @@ import SwiftyJSON
 import Moya
 import MoyaSugar
 
-enum Jitensha {
+enum JitenshaAPI {
     case signup(String, String)
     case login(String, String)
     case places
     case rent([String:Any])
 }
 
-extension Jitensha: SugarTargetType {
+extension JitenshaAPI: SugarTargetType {
 
     var route: MoyaSugar.Route {
         switch self {
@@ -36,9 +36,9 @@ extension Jitensha: SugarTargetType {
     var params: MoyaSugar.Parameters? {
         switch self {
         case let .signup(email, password):
-            return JSONEncoding() => ["username":email, "password":password]
+            return JSONEncoding() => ["email":email, "password":password]
         case let .login(email, password):
-            return JSONEncoding() => ["username":email, "password":password]
+            return JSONEncoding() => ["email":email, "password":password]
         case .places:
             return nil
         case let .rent(card):
@@ -58,7 +58,7 @@ extension Jitensha: SugarTargetType {
 extension SugarTargetType {
 
     var baseURL: URL {
-        return URL(string: "https://localhost:8080/api/v1/auth")!
+        return URL(string: "http://localhost:8080/api/v1")!
     }
 
     var token: String! {

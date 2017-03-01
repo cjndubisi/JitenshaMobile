@@ -9,9 +9,10 @@
 import SwiftyJSON
 import PromiseKit
 import Moya
+import SimpleKeychain
 
 protocol Auth {
-    var bToken: String! {get set}
+    var apiToken: String! {get set}
 
     func signUp(with email: String, password: String ) -> Promise<Void>
     func login(with email: String, password: String) -> Promise<Void>
@@ -20,7 +21,12 @@ protocol Auth {
 
 class APIClinet: Auth {
 
-    var bToken: String!
+    var apiToken: String! {
+        didSet {
+            A0SimpleKeychain(service: "Jitensha").setString(apiToken, forKey: "accessToken")
+        }
+    }
+
     static let shared = APIClinet()
 
     private init() {
@@ -29,14 +35,19 @@ class APIClinet: Auth {
 
     func login(with email: String, password: String) -> Promise<Void> {
         return Promise{ fulfill, reject in
-            MoyaProvider<Jitensha>()
+            MoyaProvider<JitenshaAPI>()
                 .request(.login(email, password)) { (result) in
 
                     switch result {
                     case let .success(response):
                         do {
-                            let json = try response.mapJSON()
-                            self.bToken = JSON(json)["accessToken"].string
+                            let jsonData = try response.mapJSON()
+                            let json = JSON(jsonData)
+                            guard let apiToken = json["accessToken"].string else {
+                                reject(JitenshaAPIError.invalidCredential(response))
+                                return
+                            }
+                            self.apiToken = apiToken
                             fulfill()
                         } catch {
                             reject(error)
@@ -50,14 +61,19 @@ class APIClinet: Auth {
 
     func signUp(with email: String, password: String) -> Promise<Void> {
         return Promise{ fulfill, reject in
-            MoyaProvider<Jitensha>()
+            MoyaProvider<JitenshaAPI>()
                 .request(.signup(email, password)) { (result) in
 
                     switch result {
                     case let .success(response):
                         do {
-                            let json = try response.mapJSON()
-                            self.bToken = JSON(json)["accessToken"].string
+                            let jsonData = try response.mapJSON()
+                            let json = JSON(jsonData)
+                            guard let apiToken = json["accessToken"].string else {
+                                reject(JitenshaAPIError.invalidCredential(response))
+                                return
+                            }
+                            self.apiToken = apiToken
                             fulfill()
                         } catch {
                             reject(error)
@@ -71,8 +87,8 @@ class APIClinet: Auth {
 
     func places() -> Promise<[JSON]> {
         return Promise { fulfill, reject in
-            MoyaProvider<Jitensha>()
-                .request(Jitensha.places) { (result) in
+            MoyaProvider<JitenshaAPI>()
+                .request(.places) { (result) in
                     switch result {
                     case let .success(response):
                         do {
@@ -87,6 +103,25 @@ class APIClinet: Auth {
                     }
 
                 }
+        }
+    }
+}
+
+
+// MARK: - API Errors
+public enum JitenshaAPIError: Swift.Error {
+
+    case invalidCredential(Response)
+
+}
+
+// MARK: - Error Descriptions
+
+extension JitenshaAPIError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .invalidCredential:
+            return "Invalid email or password"
         }
     }
 }
