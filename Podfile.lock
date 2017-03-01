@@ -1,0 +1,97 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Hue (2.0.1)
+  - Moya (8.0.2):
+    - Moya/Core (= 8.0.2)
+  - Moya-SwiftyJSONMapper (2.2.0):
+    - Moya-SwiftyJSONMapper/Core (= 2.2.0)
+  - Moya-SwiftyJSONMapper/Core (2.2.0):
+    - Moya (~> 8.0.0)
+    - SwiftyJSON
+  - Moya/Core (8.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - MoyaSugar (0.4.0):
+    - MoyaSugar/Core (= 0.4.0)
+  - MoyaSugar/Core (0.4.0):
+    - Moya (>= 8.0.0)
+  - Nimble (6.0.1)
+  - NVActivityIndicatorView (3.5)
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/Alamofire (4.1.7):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
+  - Quick (1.1.0)
+  - Result (3.2.0)
+  - SimpleKeychain (0.7.0)
+  - SwiftValidator (4.0.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Hue
+  - Moya-SwiftyJSONMapper
+  - MoyaSugar
+  - Nimble
+  - NVActivityIndicatorView
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
+  - PromiseKit
+  - PromiseKit/Alamofire (~> 4.0)
+  - Quick
+  - SimpleKeychain (~> 0.7)
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 2a6c23ad9efd76127f6109445515cb9780e5ad92
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
+  Moya-SwiftyJSONMapper: 03c9d3e562c9025c8c00fa3ec97ae1da61a2be37
+  MoyaSugar: 302175740302bed7309b9483c4a3321631eab753
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  NVActivityIndicatorView: e5252b082f93885f0bfc24c318719b4eaabcd37b
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  Result: 5a6705171c0613cc5fbf6ec55ff520cc62a8e81d
+  SimpleKeychain: b50cef3b87939d480ea1143425c00f5b4b70fe21
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 03b108f52db523ac230f4ddf4c2793cb3b4924be
+
+COCOAPODS: 1.1.1
