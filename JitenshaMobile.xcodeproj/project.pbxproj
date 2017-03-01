@@ -17,8 +17,8 @@
 		4FA72C111E6707A200104FAA /* POST#auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0D1E6707A200104FAA /* POST#auth.json */; };
 		4FA72C121E6707A200104FAA /* Post#register.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0E1E6707A200104FAA /* Post#register.json */; };
 		4FA72C131E6707A200104FAA /* POST#rent.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0F1E6707A200104FAA /* POST#rent.json */; };
-		4FA72C181E673A7F00104FAA /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C171E673A7F00104FAA /* Route.swift */; };
-		4FA72C1A1E673FAA00104FAA /* JitenshaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C191E673FAA00104FAA /* JitenshaAPI.swift */; };
+		4FA72C181E673A7F00104FAA /* JitenshaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C171E673A7F00104FAA /* JitenshaAPI.swift */; };
+		4FA72C1A1E673FAA00104FAA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C191E673FAA00104FAA /* APIClient.swift */; };
 		572566ADDC4018C99C92B7A2 /* Pods_JitenshaMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */; };
 		A2681A36063D9C2CC5D48AAE /* Pods_JitenshaMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD2CCE4C90B6E42B28FDA84 /* Pods_JitenshaMobile.framework */; };
 /* End PBXBuildFile section */
@@ -50,8 +50,8 @@
 		4FA72C0D1E6707A200104FAA /* POST#auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POST#auth.json"; sourceTree = "<group>"; };
 		4FA72C0E1E6707A200104FAA /* Post#register.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Post#register.json"; sourceTree = "<group>"; };
 		4FA72C0F1E6707A200104FAA /* POST#rent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POST#rent.json"; sourceTree = "<group>"; };
-		4FA72C171E673A7F00104FAA /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = APIClinet/Route.swift; sourceTree = "<group>"; };
-		4FA72C191E673FAA00104FAA /* JitenshaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JitenshaAPI.swift; path = APIClinet/JitenshaAPI.swift; sourceTree = "<group>"; };
+		4FA72C171E673A7F00104FAA /* JitenshaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JitenshaAPI.swift; path = APIClinet/JitenshaAPI.swift; sourceTree = "<group>"; };
+		4FA72C191E673FAA00104FAA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = APIClinet/APIClient.swift; sourceTree = "<group>"; };
 		66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitenshaMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0F8131C6BE540190FEFC0B /* Pods-JitenshaMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile.release.xcconfig"; sourceTree = "<group>"; };
 		A7A2A953AD20097880BA54B8 /* Pods-JitenshaMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,8 +127,7 @@
 				4FA72BF31E66F3F000104FAA /* Assets.xcassets */,
 				4FA72BF51E66F3F000104FAA /* LaunchScreen.storyboard */,
 				4FA72BF81E66F3F000104FAA /* Info.plist */,
-				4FA72C171E673A7F00104FAA /* Route.swift */,
-				4FA72C191E673FAA00104FAA /* JitenshaAPI.swift */,
+				4FA72C1B1E67466300104FAA /* API */,
 			);
 			path = JitenshaMobile;
 			sourceTree = "<group>";
@@ -152,6 +151,15 @@
 				4FA72C0F1E6707A200104FAA /* POST#rent.json */,
 			);
 			name = "JSON Responses";
+			sourceTree = "<group>";
+		};
+		4FA72C1B1E67466300104FAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4FA72C171E673A7F00104FAA /* JitenshaAPI.swift */,
+				4FA72C191E673FAA00104FAA /* APIClient.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,10 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA72C1A1E673FAA00104FAA /* JitenshaAPI.swift in Sources */,
+				4FA72C1A1E673FAA00104FAA /* APIClient.swift in Sources */,
 				4FA72BEF1E66F3F000104FAA /* AuthController.swift in Sources */,
 				4FA72BED1E66F3F000104FAA /* AppDelegate.swift in Sources */,
-				4FA72C181E673A7F00104FAA /* Route.swift in Sources */,
+				4FA72C181E673A7F00104FAA /* JitenshaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
