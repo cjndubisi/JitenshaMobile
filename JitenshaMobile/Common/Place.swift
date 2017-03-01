@@ -7,7 +7,19 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class Jitensha {
-    
+class Place {
+
+    let name: String
+    let id: String
+    let lat: Double
+    let long: Double
+
+    init(json: JSON) {
+        name = json["name"].string!
+        lat = json["location"]["lat"].double!
+        long = json["location"]["long"].double!
+        id = json["id"].string!
+    }
 }

@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Wzp-kU-9va" customClass="LAMapAnnotationCallout" customModule="JitenshaMobile" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="Wzp-kU-9va" customClass="PlaceAnnotationCallout" customModule="JitenshaMobile" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="348" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azE-wa-fgp">
+                <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azE-wa-fgp">
                     <rect key="frame" x="274" y="10" width="66" height="44"/>
                     <color key="backgroundColor" red="0.25490196079999999" green="0.70588235290000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -26,6 +26,14 @@
                     <state key="normal" title="Rent">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="rent" destination="Wzp-kU-9va" eventType="touchUpInside" id="3Cq-EO-spe"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urawa Washington Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-Ej-2wJ">
                     <rect key="frame" x="8" y="8" width="244" height="48"/>
@@ -46,6 +54,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="name" destination="Ljs-Ej-2wJ" id="7V1-4J-2A1"/>
+            </connections>
             <point key="canvasLocation" x="-326" y="24"/>
         </view>
     </objects>
