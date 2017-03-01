@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4FA72BED1E66F3F000104FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72BEC1E66F3F000104FAA /* AppDelegate.swift */; };
-		4FA72BEF1E66F3F000104FAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72BEE1E66F3F000104FAA /* ViewController.swift */; };
+		4FA72BEF1E66F3F000104FAA /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72BEE1E66F3F000104FAA /* AuthController.swift */; };
 		4FA72BF21E66F3F000104FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72BF01E66F3F000104FAA /* Main.storyboard */; };
 		4FA72BF41E66F3F000104FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72BF31E66F3F000104FAA /* Assets.xcassets */; };
 		4FA72BF71E66F3F000104FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72BF51E66F3F000104FAA /* LaunchScreen.storyboard */; };
 		4FA72C021E66F3F000104FAA /* JitenshaMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C011E66F3F000104FAA /* JitenshaMobileTests.swift */; };
+		4FA72C101E6707A200104FAA /* GET#places.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0C1E6707A200104FAA /* GET#places.json */; };
+		4FA72C111E6707A200104FAA /* POST#auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0D1E6707A200104FAA /* POST#auth.json */; };
+		4FA72C121E6707A200104FAA /* Post#register.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0E1E6707A200104FAA /* Post#register.json */; };
+		4FA72C131E6707A200104FAA /* POST#rent.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA72C0F1E6707A200104FAA /* POST#rent.json */; };
+		4FA72C161E67116800104FAA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA72C151E67116800104FAA /* MainViewController.swift */; };
+		572566ADDC4018C99C92B7A2 /* Pods_JitenshaMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */; };
+		A2681A36063D9C2CC5D48AAE /* Pods_JitenshaMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD2CCE4C90B6E42B28FDA84 /* Pods_JitenshaMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1927EB7D9847CE85A1F0F146 /* Pods-JitenshaMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		3910CD167AC9482937069BBA /* Pods-JitenshaMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA72BE91E66F3F000104FAA /* JitenshaMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JitenshaMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA72BEC1E66F3F000104FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FA72BEE1E66F3F000104FAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FA72BEE1E66F3F000104FAA /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		4FA72BF11E66F3F000104FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FA72BF31E66F3F000104FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FA72BF61E66F3F000104FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +45,15 @@
 		4FA72BFD1E66F3F000104FAA /* JitenshaMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JitenshaMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA72C011E66F3F000104FAA /* JitenshaMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JitenshaMobileTests.swift; sourceTree = "<group>"; };
 		4FA72C031E66F3F000104FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA72C0C1E6707A200104FAA /* GET#places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "GET#places.json"; sourceTree = "<group>"; };
+		4FA72C0D1E6707A200104FAA /* POST#auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POST#auth.json"; sourceTree = "<group>"; };
+		4FA72C0E1E6707A200104FAA /* Post#register.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Post#register.json"; sourceTree = "<group>"; };
+		4FA72C0F1E6707A200104FAA /* POST#rent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "POST#rent.json"; sourceTree = "<group>"; };
+		4FA72C151E67116800104FAA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitenshaMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0F8131C6BE540190FEFC0B /* Pods-JitenshaMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile.release.xcconfig"; sourceTree = "<group>"; };
+		A7A2A953AD20097880BA54B8 /* Pods-JitenshaMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitenshaMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDD2CCE4C90B6E42B28FDA84 /* Pods_JitenshaMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitenshaMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2681A36063D9C2CC5D48AAE /* Pods_JitenshaMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +69,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572566ADDC4018C99C92B7A2 /* Pods_JitenshaMobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20DD6AD653E8261519C9F892 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3910CD167AC9482937069BBA /* Pods-JitenshaMobile.debug.xcconfig */,
+				7D0F8131C6BE540190FEFC0B /* Pods-JitenshaMobile.release.xcconfig */,
+				A7A2A953AD20097880BA54B8 /* Pods-JitenshaMobileTests.debug.xcconfig */,
+				1927EB7D9847CE85A1F0F146 /* Pods-JitenshaMobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45CF9FE906B2F5D2CB091F23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDD2CCE4C90B6E42B28FDA84 /* Pods_JitenshaMobile.framework */,
+				66F4CC0AC00B3C529330A39B /* Pods_JitenshaMobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4FA72BE01E66F3F000104FAA = {
 			isa = PBXGroup;
 			children = (
 				4FA72BEB1E66F3F000104FAA /* JitenshaMobile */,
 				4FA72C001E66F3F000104FAA /* JitenshaMobileTests */,
 				4FA72BEA1E66F3F000104FAA /* Products */,
+				20DD6AD653E8261519C9F892 /* Pods */,
+				45CF9FE906B2F5D2CB091F23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				4FA72BEC1E66F3F000104FAA /* AppDelegate.swift */,
-				4FA72BEE1E66F3F000104FAA /* ViewController.swift */,
+				4FA72BEE1E66F3F000104FAA /* AuthController.swift */,
+				4FA72C151E67116800104FAA /* MainViewController.swift */,
 				4FA72BF01E66F3F000104FAA /* Main.storyboard */,
 				4FA72BF31E66F3F000104FAA /* Assets.xcassets */,
 				4FA72BF51E66F3F000104FAA /* LaunchScreen.storyboard */,
@@ -92,8 +135,20 @@
 			children = (
 				4FA72C011E66F3F000104FAA /* JitenshaMobileTests.swift */,
 				4FA72C031E66F3F000104FAA /* Info.plist */,
+				4FA72C141E6707AC00104FAA /* JSON Responses */,
 			);
 			path = JitenshaMobileTests;
+			sourceTree = "<group>";
+		};
+		4FA72C141E6707AC00104FAA /* JSON Responses */ = {
+			isa = PBXGroup;
+			children = (
+				4FA72C0C1E6707A200104FAA /* GET#places.json */,
+				4FA72C0D1E6707A200104FAA /* POST#auth.json */,
+				4FA72C0E1E6707A200104FAA /* Post#register.json */,
+				4FA72C0F1E6707A200104FAA /* POST#rent.json */,
+			);
+			name = "JSON Responses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FA72C061E66F3F000104FAA /* Build configuration list for PBXNativeTarget "JitenshaMobile" */;
 			buildPhases = (
+				51C22852DF2E7D87F24DBA2B /* [CP] Check Pods Manifest.lock */,
 				4FA72BE51E66F3F000104FAA /* Sources */,
 				4FA72BE61E66F3F000104FAA /* Frameworks */,
 				4FA72BE71E66F3F000104FAA /* Resources */,
+				B1EC1D940FEBF66720F87851 /* [CP] Embed Pods Frameworks */,
+				511B1ED616B0E98469C93924 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FA72C091E66F3F000104FAA /* Build configuration list for PBXNativeTarget "JitenshaMobileTests" */;
 			buildPhases = (
+				C45545FDC7CFE249239D5094 /* [CP] Check Pods Manifest.lock */,
 				4FA72BF91E66F3F000104FAA /* Sources */,
 				4FA72BFA1E66F3F000104FAA /* Frameworks */,
 				4FA72BFB1E66F3F000104FAA /* Resources */,
+				76151671EA578E9C5D6C3791 /* [CP] Embed Pods Frameworks */,
+				34A74CE91ED435947FDC1CDD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,17 +251,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA72C131E6707A200104FAA /* POST#rent.json in Resources */,
+				4FA72C101E6707A200104FAA /* GET#places.json in Resources */,
+				4FA72C121E6707A200104FAA /* Post#register.json in Resources */,
+				4FA72C111E6707A200104FAA /* POST#auth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34A74CE91ED435947FDC1CDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		511B1ED616B0E98469C93924 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51C22852DF2E7D87F24DBA2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76151671EA578E9C5D6C3791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JitenshaMobileTests/Pods-JitenshaMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1EC1D940FEBF66720F87851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JitenshaMobile/Pods-JitenshaMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45545FDC7CFE249239D5094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FA72BE51E66F3F000104FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA72BEF1E66F3F000104FAA /* ViewController.swift in Sources */,
+				4FA72C161E67116800104FAA /* MainViewController.swift in Sources */,
+				4FA72BEF1E66F3F000104FAA /* AuthController.swift in Sources */,
 				4FA72BED1E66F3F000104FAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +495,12 @@
 		};
 		4FA72C071E66F3F000104FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3910CD167AC9482937069BBA /* Pods-JitenshaMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M9399PEWF4;
 				INFOPLIST_FILE = JitenshaMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjndubisi.JitenshaMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,10 +510,12 @@
 		};
 		4FA72C081E66F3F000104FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0F8131C6BE540190FEFC0B /* Pods-JitenshaMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M9399PEWF4;
 				INFOPLIST_FILE = JitenshaMobile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjndubisi.JitenshaMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,8 +525,8 @@
 		};
 		4FA72C0A1E66F3F000104FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A2A953AD20097880BA54B8 /* Pods-JitenshaMobileTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = M9399PEWF4;
 				INFOPLIST_FILE = JitenshaMobileTests/Info.plist;
@@ -377,8 +540,8 @@
 		};
 		4FA72C0B1E66F3F000104FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1927EB7D9847CE85A1F0F146 /* Pods-JitenshaMobileTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = M9399PEWF4;
 				INFOPLIST_FILE = JitenshaMobileTests/Info.plist;
@@ -409,6 +572,7 @@
 				4FA72C081E66F3F000104FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FA72C091E66F3F000104FAA /* Build configuration list for PBXNativeTarget "JitenshaMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +581,7 @@
 				4FA72C0B1E66F3F000104FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
