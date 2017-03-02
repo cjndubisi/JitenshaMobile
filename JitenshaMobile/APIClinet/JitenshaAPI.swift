@@ -46,10 +46,6 @@ extension JitenshaAPI: SugarTargetType {
         }
     }
 
-    var httpHeaderFields: [String : String]? {
-        return self.token == nil ? nil : ["Authorization": self.token]
-    }
-
     var task: Task {
         return .request
     }
@@ -59,10 +55,6 @@ extension SugarTargetType {
 
     var baseURL: URL {
         return URL(string: "http://localhost:8080/api/v1")!
-    }
-
-    var token: String! {
-        return AppDelegate.delegate.apiToken
     }
 
     var sampleData: Data {

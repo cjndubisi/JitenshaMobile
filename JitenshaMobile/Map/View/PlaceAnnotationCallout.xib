@@ -12,12 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Wzp-kU-9va" customClass="PlaceAnnotationCallout" customModule="JitenshaMobile" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="348" height="64"/>
+        <view contentMode="scaleToFill" id="Wzp-kU-9va" customClass="PlaceMapAnnotationCallout" customModule="JitenshaMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="62"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azE-wa-fgp">
-                    <rect key="frame" x="274" y="10" width="66" height="44"/>
+                    <rect key="frame" x="160" y="10" width="63" height="42"/>
                     <color key="backgroundColor" red="0.25490196079999999" green="0.70588235290000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="azE-wa-fgp" secondAttribute="height" multiplier="1.5" id="imV-6J-gul"/>
@@ -32,11 +32,11 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="rent" destination="Wzp-kU-9va" eventType="touchUpInside" id="3Cq-EO-spe"/>
+                        <action selector="rent" destination="Wzp-kU-9va" eventType="touchUpInside" id="Xaj-v7-eZX"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urawa Washington Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljs-Ej-2wJ">
-                    <rect key="frame" x="8" y="8" width="244" height="48"/>
+                    <rect key="frame" x="8" y="8" width="130" height="46"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -55,9 +55,9 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="name" destination="Ljs-Ej-2wJ" id="7V1-4J-2A1"/>
+                <outlet property="name" destination="Ljs-Ej-2wJ" id="9fp-eD-92h"/>
             </connections>
-            <point key="canvasLocation" x="-326" y="24"/>
+            <point key="canvasLocation" x="-402" y="-104"/>
         </view>
     </objects>
 </document>

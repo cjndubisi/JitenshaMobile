@@ -14,7 +14,7 @@ class UIAssistant {
         return MapViewController()
     }
 
-    static func alertError(with title: String = "Error", message: String, style: UIAlertActionStyle = .default)  -> UIAlertController {
+    static func alert(with title: String = "Error", message: String, style: UIAlertActionStyle = .default)  -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "dismiss", style: style, handler: nil)
         alert.addAction(action)

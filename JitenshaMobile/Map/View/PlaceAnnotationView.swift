@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-
 import MapKit
 
 class PlaceMapAnnotationView: MKPinAnnotationView {
@@ -18,6 +16,7 @@ class PlaceMapAnnotationView: MKPinAnnotationView {
 
     private var calloutView: PlaceMapAnnotationCallout?
     private var hitOutside:Bool = true
+    weak var calloutDelegate: PlaceMapAnnotationCalloutDelegate?
 
     var preventDeselection:Bool {
         return !hitOutside
@@ -60,10 +59,11 @@ class PlaceMapAnnotationView: MKPinAnnotationView {
         self.superview?.bringSubview(toFront: self)
 
         if (calloutView == nil) {
-            let views = Bundle.main.loadNibNamed("LAMapAnnotationCallout", owner: nil, options: nil)
+            let views = Bundle.main.loadNibNamed("PlaceAnnotationCallout", owner: nil, options: nil)
 
             let calloutView = views?[0] as! PlaceMapAnnotationCallout
             self.calloutView = calloutView
+            self.calloutView?.delegate = calloutDelegate
             self.calloutView?.annotation = self.annotation as? PlaceMapAnnotation
             self.calloutView?.layer.cornerRadius = 10
             self.calloutView?.center = CGPoint(x: self.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)

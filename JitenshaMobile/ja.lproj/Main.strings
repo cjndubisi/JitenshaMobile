@@ -1,0 +1,12 @@
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "AMe-NU-BQh"; */
+"AMe-NU-BQh.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Y6c-0Z-aAz"; */
+"Y6c-0Z-aAz.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "lwi-3o-WIY"; */
+"lwi-3o-WIY.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "zMk-Kl-p3q"; */
+"zMk-Kl-p3q.normalTitle" = "Register";

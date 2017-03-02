@@ -11,15 +11,15 @@ import CoreLocation
 
 class PlaceMapAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
-    var name: String
-
+    let name: String
+    let id: String
     init(place: Place) {
+        self.id = place.id
         self.name = place.name
-
-        self.coordinate = CLLocation(latitude: place.long, longitude: place.long).coordinate
+        self.coordinate = CLLocation(latitude: place.lat, longitude: place.long).coordinate
     }
 }
 
 protocol PlaceMapAnnotationCalloutDelegate: class {
-    func rent(with: MKAnnotation)
+    func rent(with annotation: MKAnnotation)
 }

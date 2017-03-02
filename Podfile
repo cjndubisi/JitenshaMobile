@@ -10,11 +10,10 @@ target 'JitenshaMobile' do
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
   pod 'PromiseKit'
-  pod 'PromiseKit/Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
   pod 'MoyaSugar'
-  pod 'Moya-SwiftyJSONMapper'
   pod 'SimpleKeychain', '~> 0.7'
-  pod 'Hue'
+  pod 'Sugar'
   pod 'NVActivityIndicatorView'
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 
@@ -23,6 +22,12 @@ target 'JitenshaMobile' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+  end
+  
+  target 'JitenshaMobileUITests' do
+      inherit! :search_paths
+      # Pods for testing
+
   end
 
 end
