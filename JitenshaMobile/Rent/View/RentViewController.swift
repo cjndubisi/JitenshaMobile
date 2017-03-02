@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import Caishen
 
 class RentViewController: UIViewController {
 
@@ -32,10 +33,10 @@ class RentViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Rent", style: .done, target: self, action: #selector(rent))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancel))
 
-        validator.registerField(cardNumberField, rules: [RequiredRule(message: "Card Number cannot be emptry")])
+        validator.registerField(cardNumberField, rules: [RequiredRule(message: "Card Number cannot be emptry"), MaxLengthRule(length: 16), MinLengthRule(length: 16)])
         validator.registerField(cardHolderField, rules: [RequiredRule(message: "Card Holder cannot be emptry")])
-        validator.registerField(expirationField, rules: [RequiredRule(message: "Expiration cannot be emptry")])
-        validator.registerField(cvvField, rules: [RequiredRule(message: "CVV cannot be emptry")])
+        validator.registerField(expirationField, rules: [RequiredRule(message: "Expiration cannot be emptry"), MaxLengthRule(length: 5)])
+        validator.registerField(cvvField, rules: [RequiredRule(message: "CVV cannot be emptry"), MaxLengthRule(length: 3)])
     }
 
     func cancel() {
@@ -70,14 +71,33 @@ class RentViewController: UIViewController {
     fileprivate func validateInput() -> UIAlertController? {
         var errorMsg: (String, String)!
 
+        // validate input rules
         validator.validate { (errors) in
             if let (field, error) = errors.first {
                 errorMsg = ((field as! UITextField).placeholder!, error.errorMessage)
             }
         }
+
         guard errorMsg == nil else {
             return UIAssistant.alert(with:errorMsg.0, message: errorMsg.1)
         }
+
+        // validate card details
+        let expiryString = expirationField.text!.split("/")
+        let expiryMonth = expiryString.count == 2 ? expiryString[0] : ""
+        let expiryYear = expiryString.count == 2 ? expiryString[1] : ""
+        let number = cardNumberField.text ?? ""
+        let cvc = CVC(rawValue: cvvField.text ?? "")
+        let expiry =  Expiry(month: expiryMonth, year: expiryYear) ?? .invalid
+
+        let type = NumberInputTextField().cardTypeRegister.cardType(for: Number(rawValue: number))
+
+        guard type.validate(cvc: cvc)
+            .union(type.validate(expiry: expiry))
+            .union(type.validate(number: Number(rawValue: number))) == .Valid else {
+                return UIAssistant.alert(message: "Invalid card details")
+        }
+
         return nil
     }
 }

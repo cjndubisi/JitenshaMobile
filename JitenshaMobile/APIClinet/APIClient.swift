@@ -106,10 +106,13 @@ class APIClient: Auth {
                     case let .success(response):
                         do {
                             let json = try response.mapJSON()
-                            let places = JSON(json)["results"].array!
+                            guard let places = JSON(json)["results"].array else {
+                                reject(JitenshaAPIError.internalError(response))
+                                return
+                            }
                             fulfill(places)
                         } catch {
-                            reject(NSError(domain: "JSON Mapping", code: 300, userInfo: [NSLocalizedDescriptionKey: "Could not complete operation"]))
+                            reject(JitenshaAPIError.internalError(response))
                         }
                     case let .failure(error):
                         reject(error)
@@ -148,7 +151,7 @@ class APIClient: Auth {
 public enum JitenshaAPIError: Swift.Error {
 
     case invalidCredential(Response)
-
+    case internalError(Response)
 }
 
 // MARK: - Error Descriptions
@@ -158,6 +161,8 @@ extension JitenshaAPIError: LocalizedError {
         switch self {
         case .invalidCredential:
             return "Invalid email or password"
+        case .internalError:
+            return "Something went wrong!!!"
         }
     }
 }

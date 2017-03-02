@@ -8,6 +8,7 @@ target 'JitenshaMobile' do
 
   # Pods for JitenshaMobile
   pod 'OHHTTPStubs'
+  pod 'Caishen'
   pod 'OHHTTPStubs/Swift'
   pod 'PromiseKit'
   pod 'SwiftyJSON'

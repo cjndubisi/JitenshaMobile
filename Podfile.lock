@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
-  - Localize-Swift (1.7.1)
+  - Caishen (2.0.1)
   - Moya (8.0.2):
     - Moya/Core (= 8.0.2)
   - Moya/Core (8.0.2):
@@ -46,7 +46,7 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Localize-Swift (~> 1.7)
+  - Caishen
   - MoyaSugar
   - Nimble
   - NVActivityIndicatorView
@@ -71,7 +71,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
+  Caishen: e27ae02c0e4a30f3e2442730e7ee144d9e6adc72
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   MoyaSugar: 302175740302bed7309b9483c4a3321631eab753
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
@@ -85,6 +85,6 @@ SPEC CHECKSUMS:
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: a8f36193542fb8f83a191c7ab806d34bafe905c1
+PODFILE CHECKSUM: 9b8120e70dc46ed4807c6baaa8a7592d0be87d7a
 
 COCOAPODS: 1.2.0
