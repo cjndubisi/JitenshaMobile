@@ -10,6 +10,7 @@ import UIKit
 import SwiftValidator
 import NVActivityIndicatorView
 import PromiseKit
+import Sugar
 
 class AuthController: UIViewController, NVActivityIndicatorViewable {
 
@@ -17,7 +18,9 @@ class AuthController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var passwordField: UITextField!
 
     private var validator: Validator = Validator()
-    
+    private var keyboardObserver: KeyboardObserver!
+    private var keyboardIsUp: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,38 +39,87 @@ class AuthController: UIViewController, NVActivityIndicatorViewable {
 
         validator.registerField(emailField, rules: [RequiredRule(), EmailRule()])
         validator.registerField(passwordField, rules: [RequiredRule(), PasswordRule()])
+
+        // Handle UIKeyboardWillShow & UIKeyboardWillHide
+        let handler = BasicKeyboardHandler()
+        handler.show = { [weak self] height in
+            guard let sSelf = self else { return }
+            if !sSelf.keyboardIsUp {
+                let diff = sSelf.view.frame.height - sSelf.passwordField.frame.maxY
+                sSelf.view.frame.origin.y += height - diff
+                sSelf.keyboardIsUp = true
+            }
+        }
+
+        handler.hide = { [weak self] in
+            guard let sSelf = self else { return }
+            if sSelf.keyboardIsUp {
+                sSelf.view.frame.origin.y = 0
+                sSelf.keyboardIsUp = false
+            }
+        }
+        keyboardObserver = KeyboardObserver(handler: handler)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        keyboardObserver.activate()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        keyboardObserver.deactivate()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
     @IBAction func login() {
-        startAnimating()
-        APIClinet.shared
-            .login(with: emailField.text!, password: passwordField.text!)
-            .then{ [unowned self] () -> Void in
-                self.stopAnimating()
-                self.moveToHome()
-        }.catch { [unowned self] (error) in
-            self.stopAnimating()
-            self.present(UIAssistant.alertError(message: error.localizedDescription), animated: true)
+        if let errorAlert = validateInput() {
+            self.present(errorAlert, animated: true)
+            return
         }
+        startAnimating()
+        let promise = APIClient.shared
+            .login(with: emailField.text!, password: passwordField.text!)
+        self.authenticate(promise)
     }
 
     @IBAction func signup() {
-        startAnimating()
-        APIClinet.shared
-            .signUp(with: emailField.text!, password: passwordField.text!)
-            .then{ [unowned self] () -> Void in
-                self.stopAnimating()
-                self.moveToHome()
-            }.catch { [unowned self] (error) in
-                self.stopAnimating()
-                self.present(UIAssistant.alertError(message: error.localizedDescription), animated: true)
+        if let errorAlert = validateInput() {
+            self.present(errorAlert, animated: true)
+            return
         }
+        startAnimating()
+        let promise = APIClient.shared
+            .signUp(with: emailField.text!, password: passwordField.text!)
+        self.authenticate(promise)
     }
 
-    fileprivate func validateInput() {
-        validator.validate { (errors) in
-
+    private func authenticate(_ promise: Promise<Void>) {
+        promise.then { [unowned self] () -> Void in
+            self.stopAnimating()
+            self.moveToHome()
+            }.catch { [unowned self] (error) in
+                self.stopAnimating()
+                self.present(UIAssistant.alert(message: error.localizedDescription), animated: true)
         }
+
+    }
+
+    fileprivate func validateInput() -> UIAlertController? {
+        var errorMsg: (String, String)!
+
+        validator.validate { (errors) in
+            if let (field, error) = errors.first {
+                errorMsg = ((field as! UITextField).placeholder!, error.errorMessage)
+            }
+        }
+        guard errorMsg == nil else {
+            return UIAssistant.alert(with:errorMsg.0, message: errorMsg.1)
+        }
+        return nil
     }
 
     private func moveToHome() {

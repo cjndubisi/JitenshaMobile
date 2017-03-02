@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,6 +36,26 @@
                BlueprintIdentifier = "4FA72BFC1E66F3F000104FAA"
                BuildableName = "JitenshaMobileTests.xctest"
                BlueprintName = "JitenshaMobileTests"
+               ReferencedContainer = "container:JitenshaMobile.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4FB9D3B61E67943F00116B3C"
+               BuildableName = "JitenshaMobileUITests.xctest"
+               BlueprintName = "JitenshaMobileUITests"
+               ReferencedContainer = "container:JitenshaMobile.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4FB9D3D11E67D6A000116B3C"
+               BuildableName = "JitenshaMobileUITests2.xctest"
+               BlueprintName = "JitenshaMobileUITests2"
                ReferencedContainer = "container:JitenshaMobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
